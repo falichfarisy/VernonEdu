@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:vernon_edu/pages/home/home_page.dart';
+import 'package:vernon_edu/constants/colors.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -35,7 +36,10 @@ class _LoginPageState extends State<LoginPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         // Input Kode Mentor
-                        Text('Kode Mentor'),
+                        Text(
+                          'Kode Mentor',
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
                         SizedBox(height: 10),
                         Container(
                           padding: EdgeInsets.only(
@@ -46,21 +50,26 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Color(0xFFF6F7FB),
+                            color: CustomColor.abuLogin,
                           ),
                           child: TextFormField(
                             decoration: InputDecoration(
-                              icon: Icon(Icons.person),
+                              icon: Icon(
+                                Icons.person,
+                                color: CustomColor.purple,
+                              ),
                               hintText: 'Masukkan Kode Mentor Anda',
                               hintStyle: TextStyle(
                                 color: Color(0xFFCECFD3),
-                                fontSize: 12,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w200,
                               ),
                               border: InputBorder.none,
                             ),
                             style: TextStyle(
-                              fontSize: 12,
-                              color: Color(0xFFCECFD3),
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black,
                             ),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
@@ -73,7 +82,10 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(height: 20),
 
                         // Input Password
-                        Text('Password'),
+                        Text(
+                          'Password',
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
                         SizedBox(height: 10),
                         Container(
                           padding: EdgeInsets.only(
@@ -84,24 +96,33 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Color(0xFFF6F7FB),
+                            color: CustomColor.abuLogin,
                           ),
                           child: TextFormField(
                             obscureText: _obscureText,
                             decoration: InputDecoration(
-                              icon: Icon(Icons.lock),
+                              prefixIcon: Icon(
+                                Icons.lock,
+                                color: CustomColor.purple,
+                              ),
                               hintText: 'Masukkan Password Anda',
                               hintStyle: TextStyle(
                                 color: Color(0xFFCECFD3),
-                                fontSize: 12,
+                                fontSize: 14,
                               ),
                               border: InputBorder.none,
+                              contentPadding: EdgeInsets.symmetric(
+                                vertical: 14,
+                                horizontal: 0,
+                              ),
                               suffixIcon: IconButton(
                                 icon: Icon(
                                   _obscureText
                                       ? Icons.visibility_off
                                       : Icons.visibility,
-                                  color: Colors.grey,
+                                  color: _obscureText
+                                      ? Colors.grey
+                                      : CustomColor.purple,
                                 ),
                                 onPressed: () {
                                   setState(() {
@@ -112,8 +133,9 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                             style: TextStyle(
-                              fontSize: 12,
-                              color: Color(0xFFCECFD3),
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black,
                             ),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
@@ -124,41 +146,33 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         SizedBox(height: 20),
-                        Container(
-                          width: double.infinity,
-                          padding: EdgeInsets.symmetric(vertical: 2),
-                          decoration: BoxDecoration(
-                            color: Color(0xFF6AD6F8),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: GestureDetector(
-                            onTap: () {
-                              if (_formKey.currentState!.validate()) {
-                                Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(builder: (_) => HomePage()),
-                                  (route) => false,
-                                );
-                              }
-                            },
-                            child: Container(
-                              width: double.infinity, // <- ini bikin full-width
-                              padding: EdgeInsets.symmetric(
-                                vertical: 15,
-                              ), // kasih padding biar tinggi bagus
-                              decoration: BoxDecoration(
-                                color: Color(0xFF6AD6F8),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Center(
-                                // supaya teks di tengah
-                                child: Text(
-                                  'Login',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+
+                        // login button
+                        InkWell(
+                          borderRadius: BorderRadius.circular(10),
+                          onTap: () {
+                            if (_formKey.currentState!.validate()) {
+                              Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(builder: (_) => HomePage()),
+                                (route) => false,
+                              );
+                            }
+                          },
+                          child: Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.symmetric(vertical: 15),
+                            decoration: BoxDecoration(
+                              color: CustomColor.blue,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Login',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
