@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:vernon_edu/pages/splash/splash_screen_page.dart';
 
 void main() {
