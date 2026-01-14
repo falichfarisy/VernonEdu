@@ -1,6 +1,6 @@
 // import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreenPage extends StatefulWidget {
   const SplashScreenPage({super.key});
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreenPage> {
     // Timer(const Duration(seconds: 3), () {
     //   Navigator.pushReplacement(
     //     context,
-    //     MaterialPageRoute(builder: (context) => const LoginPage()),
+    //     MaterialPageRoute(builder: (context) => const FacilitatorPage()),
     //   );
     // });
   }
@@ -31,29 +31,28 @@ class _SplashScreenState extends State<SplashScreenPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/img/logo.png', width: 260),
+              Image.asset('assets/img/logo.png', width: 300),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  SizedBox(
-                    width: 90,
+                children: [
+                  const SizedBox(
+                    width: 110,
                     child: Divider(thickness: 1, color: Color(0xFF955EAB)),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Text(
                       'for',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
-                        fontFamily: 'Poppins',
-                        color: Color(0xFF955EAB),
+                        color: const Color(0xFF955EAB),
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: 90,
+                  const SizedBox(
+                    width: 110,
                     child: Divider(thickness: 1, color: Color(0xFF955EAB)),
                   ),
                 ],
@@ -61,12 +60,11 @@ class _SplashScreenState extends State<SplashScreenPage> {
 
               const SizedBox(height: 16),
 
-              const Text(
+              Text(
                 'MENTOR',
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w900,
-                  fontFamily: 'Poppins',
+                style: GoogleFonts.poppins(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
                   color: Color(0xFF955EAB),
                 ),
               ),
