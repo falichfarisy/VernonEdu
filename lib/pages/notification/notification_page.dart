@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vernon_edu/constants/colors.dart';
 import 'package:vernon_edu/widgets/notification_card.dart';
 import 'package:vernon_edu/widgets/profile_card.dart';
 
