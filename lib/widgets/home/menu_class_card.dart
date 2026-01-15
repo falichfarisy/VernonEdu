@@ -9,13 +9,26 @@ class MenuClassCard extends StatelessWidget {
   const MenuClassCard({
     super.key,
     required this.items,
-    this.spacing = 20, // default spacing between items
+    this.spacing = 20, // spacing between items
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
+    return Container(
+      width: double.infinity, // full width
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12), // spacing outside
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16), // padding inside
+      decoration: BoxDecoration(
+        color: Colors.white, // white background
+        borderRadius: BorderRadius.circular(20), // rounded corners
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.15),
+            blurRadius: 10,
+            offset: const Offset(0, 4), // shadow offset
+          ),
+        ],
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: List.generate(items.length, (index) {
@@ -54,7 +67,7 @@ class _MenuItem extends StatelessWidget {
           backgroundColor: CustomColor.secondary,
           child: SvgPicture.asset(icon, width: 32, height: 32),
         ),
-        const SizedBox(height: 4),
+        const SizedBox(height: 8),
         Text(
           label,
           style: TextStyle(color: CustomColor.secondary, fontSize: 12),
