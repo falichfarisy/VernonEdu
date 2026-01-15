@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:vernon_edu/pages/home/home_page.dart';
 import 'package:vernon_edu/constants/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -22,8 +22,52 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/logo_tanpa_slogan.png'),
-            SvgPicture.asset('assets/images/logo_app.svg'),
+            SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/images/logo_tanpa_slogan.png', width: 300),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    width: 110,
+                    child: Divider(thickness: 1, color: Color(0xFF955EAB)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      'for',
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: const Color(0xFF955EAB),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 110,
+                    child: Divider(thickness: 1, color: Color(0xFF955EAB)),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 16),
+
+              Text(
+                'MENTOR',
+                style: GoogleFonts.poppins(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF955EAB),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
             SizedBox(height: 30),
             Column(
               children: [
@@ -54,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           child: TextFormField(
                             decoration: InputDecoration(
-                              icon: Icon(
+                              prefixIcon: Icon(
                                 Icons.person,
                                 color: CustomColor.primary,
                               ),
