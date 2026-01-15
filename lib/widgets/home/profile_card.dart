@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:vernon_edu/constants/colors.dart';
-
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
 
@@ -9,48 +9,41 @@ class ProfileCard extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Container(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage('assets/images/sample_profile.jpg'),
+        CircleAvatar(
+          radius: 30,
+          backgroundImage: AssetImage('assets/images/sample_profile.jpg'),
+        ),
+        SizedBox(width: 20),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Selamat Pagi',
+              style: GoogleFonts.poppins(
+                fontSize: 14,
+                color: CustomColor.textOnPrimary,
               ),
-              SizedBox(width: 20),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Selamat Pagi',
-                    style: TextStyle(
-                      color: CustomColor.textOnPrimary,
-                      fontSize: 14,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    'Tanti Nur Dwiyanti',
-                    style: TextStyle(
-                      color: CustomColor.textOnPrimary,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    'Mentor - Communication',
-                    style: TextStyle(
-                      color: CustomColor.textOnPrimary,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 12,
-                    ),
-                  ),
-                ],
+            ),
+            SizedBox(height: 5),
+            Text(
+              'Tanti Nur Dwiyanti',
+              style: GoogleFonts.poppins(
+                color: CustomColor.textOnPrimary,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
               ),
-            ],
-          ),
+            ),
+            SizedBox(height: 5),
+            Text(
+              'Mentor - Communication',
+              style: GoogleFonts.poppins(
+                color: CustomColor.textOnPrimary,
+                fontWeight: FontWeight.bold,
+                fontSize: 12,
+              ),
+            ),
+          ],
         ),
       ],
     );

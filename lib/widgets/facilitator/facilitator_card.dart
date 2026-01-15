@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vernon_edu/constants/colors.dart';
 import 'package:vernon_edu/widgets/facilitator/class_card.dart';
 
 Widget FacilitatorCard(
@@ -10,11 +11,11 @@ Widget FacilitatorCard(
   return Container(
     margin: const EdgeInsets.only(bottom: 16),
     decoration: BoxDecoration(
-      color: Colors.white,
+      color: CustomColor.textOnPrimary,
       borderRadius: BorderRadius.circular(16),
       boxShadow: [
         BoxShadow(
-          color: Colors.black.withOpacity(0.1),
+          color: CustomColor.textPrimary.withOpacity(0.1),
           blurRadius: 8,
           offset: const Offset(0, 4),
         ),
@@ -28,7 +29,7 @@ Widget FacilitatorCard(
             children: [
               const CircleAvatar(
                 radius: 24,
-                backgroundColor: Color(0xFFBABABA),
+                backgroundColor: CustomColor.textHint,
               ),
               const SizedBox(width: 16),
               Text(
@@ -48,7 +49,7 @@ Widget FacilitatorCard(
             alignment: Alignment.centerRight,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF6AD6F8),
+                backgroundColor: CustomColor.secondary,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24),
                 ),
@@ -61,7 +62,7 @@ Widget FacilitatorCard(
                 style: GoogleFonts.poppins(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: CustomColor.textOnPrimary,
                 ),
               ),
             ),
@@ -92,7 +93,7 @@ void showDetailBottomSheet(BuildContext context) {
                 width: 40,
                 height: 4,
                 decoration: BoxDecoration(
-                  color: Colors.grey[400],
+                  color: CustomColor.textHint,
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
@@ -106,7 +107,7 @@ void showDetailBottomSheet(BuildContext context) {
                 style: GoogleFonts.poppins(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: CustomColor.textPrimary,
                 ),
               ),
             ),
