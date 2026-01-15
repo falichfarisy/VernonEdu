@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                 child: ProfileCard(),
               ),
               Positioned(
-                bottom: -60, // bikin card keluar dari header
+                bottom: -60,
                 left: 20,
                 right: 20,
                 child: Container(
