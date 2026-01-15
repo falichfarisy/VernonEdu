@@ -50,13 +50,13 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: CustomColor.abuLogin,
+                            color: CustomColor.backgroundInput,
                           ),
                           child: TextFormField(
                             decoration: InputDecoration(
                               icon: Icon(
                                 Icons.person,
-                                color: CustomColor.purple,
+                                color: CustomColor.primary,
                               ),
                               hintText: 'Masukkan Kode Mentor Anda',
                               hintStyle: TextStyle(
@@ -96,14 +96,14 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: CustomColor.abuLogin,
+                            color: CustomColor.backgroundInput,
                           ),
                           child: TextFormField(
                             obscureText: _obscureText,
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.lock,
-                                color: CustomColor.purple,
+                                color: CustomColor.primary,
                               ),
                               hintText: 'Masukkan Password Anda',
                               hintStyle: TextStyle(
@@ -122,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                                       : Icons.visibility,
                                   color: _obscureText
                                       ? Colors.grey
-                                      : CustomColor.purple,
+                                      : CustomColor.primary,
                                 ),
                                 onPressed: () {
                                   setState(() {
@@ -163,7 +163,7 @@ class _LoginPageState extends State<LoginPage> {
                             width: double.infinity,
                             padding: EdgeInsets.symmetric(vertical: 15),
                             decoration: BoxDecoration(
-                              color: CustomColor.blue,
+                              color: CustomColor.secondary,
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Center(
