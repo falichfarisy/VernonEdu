@@ -2,14 +2,24 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class CustomColor {
-  static const Color purple = Color (0xff955EAB);
-  static const Color blue = Color (0xff6AD6F8);
-  static const Color white = Color (0xffffffff);
-  static const Color black = Color (0xff000000);        
-  static const Color green = Color (0xff8FBE55);
-  static const Color yellow = Color (0xffF6D14B);
-  static const Color warning = Color (0xffFF0004);
-  static const Color abuMuda = Color (0xffBABABA);
-  static const Color abuTua = Color (0xff515151);
-  static const Color abuLogin = Color (0xffF6F7FB);
+  //brand colors
+  static const Color primary = Color(0xff955EAB); //Ungu Vernon
+  static const Color secondary = Color(0xff6AD6F8); //Biru Muda
+
+  //status colors
+  static const Color success = Color(0xff8FBE55); //Hijau
+  static const Color warning = Color(0xffF6D14B); //Kuning
+  static const Color error = Color(0xffFF0004); //Merah
+
+  //neutral/ background
+  static const Color backgroundInput = Color(0xffF6F7FB); //Abu Login (Background)
+
+  //text primary
+  static const Color textPrimary = Color(0xff000000);
+  //text secondary: utk deskripsi, subtitle, dll
+  static const Color textSecondary = Color(0xff515151);
+  //text hint: place holder/ tombol mati
+  static const Color textHint = Color(0xffBABABA);
+  //Teks di atas background warna gelap/ungu
+  static const Color textOnPrimary = Color(0xffffffff); //Putih
 }
