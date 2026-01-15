@@ -1,6 +1,8 @@
-// import 'dart:async';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/pages/home/facilitator/facilitator_page.dart';
 
 class SplashScreenPage extends StatefulWidget {
   const SplashScreenPage({super.key});
@@ -14,18 +16,18 @@ class _SplashScreenState extends State<SplashScreenPage> {
   void initState() {
     super.initState();
 
-    // Timer(const Duration(seconds: 3), () {
-    //   Navigator.pushReplacement(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => const FacilitatorPage()),
-    //   );
-    // });
+    Timer(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const FacilitatorPage()),
+      );
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: CustomColor.textOnPrimary,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -38,7 +40,7 @@ class _SplashScreenState extends State<SplashScreenPage> {
                 children: [
                   const SizedBox(
                     width: 110,
-                    child: Divider(thickness: 1, color: Color(0xFF955EAB)),
+                    child: Divider(thickness: 1, color: CustomColor.primary),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -47,13 +49,13 @@ class _SplashScreenState extends State<SplashScreenPage> {
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
-                        color: const Color(0xFF955EAB),
+                        color: CustomColor.primary,
                       ),
                     ),
                   ),
                   const SizedBox(
                     width: 110,
-                    child: Divider(thickness: 1, color: Color(0xFF955EAB)),
+                    child: Divider(thickness: 1, color: CustomColor.primary),
                   ),
                 ],
               ),
@@ -65,7 +67,7 @@ class _SplashScreenState extends State<SplashScreenPage> {
                 style: GoogleFonts.poppins(
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF955EAB),
+                  color: CustomColor.primary,
                 ),
               ),
             ],

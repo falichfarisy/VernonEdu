@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vernon_edu/constants/colors.dart';
 import 'package:vernon_edu/widgets/facilitator/facilitator_card.dart';
 
 class FacilitatorPage extends StatelessWidget {
@@ -10,18 +11,22 @@ class FacilitatorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF955EAB),
+        backgroundColor: CustomColor.primary,
+        titleSpacing: 0,
         leading: IconButton(
           icon: SvgPicture.asset(
             'assets/icons/arrow-left.svg',
             width: 10,
-            color: Colors.white,
+            color: CustomColor.textOnPrimary,
           ),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
           'Fasilitator',
-          style: GoogleFonts.poppins(fontSize: 22, color: Colors.white),
+          style: GoogleFonts.poppins(
+            fontSize: 22,
+            color: CustomColor.textOnPrimary,
+          ),
         ),
       ),
 
@@ -35,7 +40,7 @@ class FacilitatorPage extends StatelessWidget {
               style: GoogleFonts.poppins(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
+                color: CustomColor.textPrimary,
               ),
             ),
 
@@ -48,7 +53,7 @@ class FacilitatorPage extends StatelessWidget {
               style: GoogleFonts.poppins(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
+                color: CustomColor.textPrimary,
               ),
             ),
 
@@ -64,7 +69,7 @@ class FacilitatorPage extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: CustomColor.textPrimary,
                     ),
                   );
                 },
