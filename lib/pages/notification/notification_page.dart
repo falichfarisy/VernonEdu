@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vernon_edu/constants/colors.dart';
 import 'package:vernon_edu/widgets/notification_card.dart';
-import 'package:vernon_edu/widgets/profile_card.dart';
+import 'package:vernon_edu/widgets/home/profile_card.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
@@ -24,10 +23,7 @@ class NotificationPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ProfileCard(
-            username: "Tanti Nur Dwiyanti",
-            role: "Mentor - Communication",
-          ),
+          const ProfileCard(),
           const SizedBox(height: 20),
 
           Padding(
@@ -52,6 +48,6 @@ class NotificationPage extends StatelessWidget {
         ],
       ),
     );
- //pengganti for loop
+    //pengganti for loop
   }
 }

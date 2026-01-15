@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vernon_edu/constants/colors.dart';
-import 'package:vernon_edu/pages/home/facilitator/facilitator_page.dart';
+import 'package:vernon_edu/pages/login/login_page.dart';
 
 class SplashScreenPage extends StatefulWidget {
   const SplashScreenPage({super.key});
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreenPage> {
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const FacilitatorPage()),
+        MaterialPageRoute(builder: (context) => const LoginPage()),
       );
     });
   }
@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreenPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/img/logo.png', width: 300),
+              Image.asset('assets/images/logo_tanpa_slogan.png', width: 300),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
