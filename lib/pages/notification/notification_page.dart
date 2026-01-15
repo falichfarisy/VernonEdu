@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vernon_edu/constants/colors.dart';
 import 'package:vernon_edu/widgets/notification_card.dart';
 import 'package:vernon_edu/widgets/home/profile_card.dart';
 
@@ -23,7 +24,19 @@ class NotificationPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ProfileCard(),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(16),
+            decoration: const BoxDecoration(
+              color: CustomColor.primary,
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+            ),
+            child: const ProfileCard(),
+            
+          ),
           const SizedBox(height: 20),
 
           Padding(
