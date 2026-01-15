@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vernon_edu/pages/detail_class/detail_class_page.dart';
-import 'package:vernon_edu/pages/home/active_class.dart';
-import 'package:vernon_edu/pages/notification/notification_page.dart';
 import 'package:vernon_edu/pages/splash/splash_screen_page.dart';
 
 void main() {

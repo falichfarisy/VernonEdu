@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:vernon_edu/constants/colors.dart';
-import 'package:vernon_edu/pages/widget/aktif_fragment.dart';
-import 'package:vernon_edu/pages/widget/mendatang_fragment.dart';
-import 'package:vernon_edu/pages/widget/selesai_fragment.dart';
+import 'package:vernon_edu/widgets/kelas/aktif_fragment.dart';
+import 'package:vernon_edu/widgets/kelas/mendatang_fragment.dart';
+import 'package:vernon_edu/widgets/kelas/selesai_fragment.dart';
 
 class ActiveClassPage extends StatefulWidget {
   const ActiveClassPage({super.key});
@@ -35,9 +35,9 @@ class _ActiveClassPageState extends State<ActiveClassPage> {
             ),
           ),
         ),
-        // ❌ Jangan pakai title biasa → ganti dengan Row
+        
         title: Row(
-          mainAxisSize: MainAxisSize.min, // ← biar tidak ngambil seluruh lebar
+          mainAxisSize: MainAxisSize.min,
           children: [
             const Text(
               "Kelas",
@@ -49,7 +49,6 @@ class _ActiveClassPageState extends State<ActiveClassPage> {
             ),
           ],
         ),
-        // ⚙️ Atur padding AppBar agar lebih rapat
         toolbarHeight: 56, // default, bisa dikurangi jika perlu
         titleSpacing:
             0, // ← ini penting! hilangkan jarak default antara leading dan title
