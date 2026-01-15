@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
 
 Widget _buildHeader() {
   return Container(
-    height: 250,
+    height: 200,
     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
     decoration: BoxDecoration(
       color: CustomColor.primary,
@@ -39,11 +39,10 @@ Widget _buildHeader() {
 
 Widget _buildMenuCard() {
   return Positioned(
-    bottom: -40, // bikin card keluar dari header
+    bottom: -60, // bikin card keluar dari header
     left: 20,
     right: 20,
     child: Container(
-      padding: EdgeInsets.symmetric(vertical: 5),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -55,7 +54,24 @@ Widget _buildMenuCard() {
           ),
         ],
       ),
-      child: MenuClassCard()
+      child: Padding(
+        padding: EdgeInsets.only(right: 20, left: 20, bottom: 12, top: 8),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            MenuClassCard(
+              items: [
+                MenuItemData(icon: 'assets/icons/folder.svg', label: 'Kelas'),
+                MenuItemData(
+                  icon: 'assets/icons/education.svg',
+                  label: 'Fasilitator',
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     ),
   );
 }
