@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vernon_edu/constants/colors.dart';
 import 'package:vernon_edu/widgets/detail_class/session_card.dart';
 import 'package:vernon_edu/widgets/home/menu_class_card.dart';
+import 'package:vernon_edu/pages/detail_class/attendance_input.dart';
 
 class DetailClassPage extends StatelessWidget {
   final String username;
@@ -57,9 +58,9 @@ class DetailClassPage extends StatelessWidget {
                       fontSize: 18,
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 14),
                   const Divider(),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 14),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -91,6 +92,7 @@ class DetailClassPage extends StatelessWidget {
                           color: Colors
                               .grey[200], // Warna abu-abu buat placeholder
                         ),
+                        child: Icon(Icons.person, color: Colors.grey[400]),
                       ),
                       const SizedBox(width: 12),
                       Column(
