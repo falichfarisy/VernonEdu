@@ -21,10 +21,7 @@ class DetailClassPage extends StatelessWidget {
         backgroundColor: CustomColor.primary,
         titleSpacing: 0,
         leading: IconButton(
-          icon: SvgPicture.asset(
-            'assets/icons/arrow-left.svg',
-            width: 10,
-          ),
+          icon: SvgPicture.asset('assets/icons/arrow-left.svg', width: 10),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
@@ -128,20 +125,28 @@ class DetailClassPage extends StatelessWidget {
                       MenuItemData(
                         label: "Presensi",
                         icon: "assets/icons/attendance.svg",
+                        page: Container(),
                       ),
                       MenuItemData(
                         label: "Modul",
                         icon: "assets/icons/book.svg",
+                        page: Container(),
                       ),
                       MenuItemData(
                         label: "Assessment",
                         icon: "assets/icons/star.svg",
+                        page: Container(),
                       ),
-                      MenuItemData(label: "RAB", icon: "assets/icons/book.svg"),
+                      MenuItemData(
+                        label: "RAB",
+                        icon: "assets/icons/book.svg",
+                        page: Container(),
+                      ),
                     ],
+
                     spacing: 30,
                   ),
-                  
+
                   const SessionCard(),
                 ],
               ),

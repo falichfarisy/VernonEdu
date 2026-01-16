@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:vernon_edu/constants/colors.dart';
+
 
 class SessionCard extends StatelessWidget {
   const SessionCard({super.key});
