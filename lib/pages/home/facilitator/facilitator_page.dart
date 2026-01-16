@@ -15,8 +15,8 @@ class FacilitatorPage extends StatelessWidget {
         titleSpacing: 0,
         leading: IconButton(
           icon: SvgPicture.asset(
-            'assets/icons/arrow-left.svg',
-            width: 10,
+            'assets/icons/chevron-left.svg',
+            width: 28,
             color: CustomColor.textOnPrimary,
           ),
           onPressed: () => Navigator.pop(context),
