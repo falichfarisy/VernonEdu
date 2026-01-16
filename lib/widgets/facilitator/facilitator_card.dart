@@ -157,7 +157,6 @@ void showAssignFacilitatorSheet(BuildContext context) {
       borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
     ),
     builder: (context) {
-      // Kita butuh StatefulBuilder supaya tampilan dropdown bisa berubah saat dipilih
       return StatefulBuilder(
         builder: (BuildContext context, StateSetter setModalState) {
           return Padding(
@@ -188,7 +187,7 @@ void showAssignFacilitatorSheet(BuildContext context) {
                   style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black, // Sesuaikan CustomColor.textPrimary
+                    color: CustomColor.textPrimary, 
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -196,7 +195,7 @@ void showAssignFacilitatorSheet(BuildContext context) {
                   'Sesi 8',
                   style: GoogleFonts.poppins(
                     fontSize: 14,
-                    color: Colors.grey, // Sesuaikan CustomColor.textSecondary
+                    color: CustomColor.textSecondary
                   ),
                 ),
 
@@ -269,7 +268,7 @@ void showAssignFacilitatorSheet(BuildContext context) {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor:
-                          CustomColor.secondary, // Warna Cyan sesuai gambar
+                          CustomColor.secondary,
                       elevation: 0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),

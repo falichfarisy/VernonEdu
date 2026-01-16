@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vernon_edu/constants/colors.dart';
-// Ubah jadi StatefulWidget karena kita butuh interaksi (Centang & Simpan)
+// StatefulWidget utk interaksi (Centang & Simpan)
 class AttendanceInput extends StatefulWidget {
   final String username;
   final String role;
@@ -18,7 +18,7 @@ class AttendanceInput extends StatefulWidget {
 }
 
 class _AttendanceInputState extends State<AttendanceInput> {
-  // Data Dummy Peserta (Nanti bisa diganti data API)
+  // Data Dummy Peserta
   List<Map<String, dynamic>> participants = [
     {'name': 'Ahmad Dahlan', 'isPresent': false},
     {'name': 'Siti Aisyah', 'isPresent': true},
@@ -28,7 +28,7 @@ class _AttendanceInputState extends State<AttendanceInput> {
     {
       'name': 'R.A. Kartini',
       'isPresent': false,
-    }, // Tambahan biar kelihatan scrollnya
+    }, 
   ];
 
   @override
@@ -41,7 +41,6 @@ class _AttendanceInputState extends State<AttendanceInput> {
           icon: SvgPicture.asset(
             'assets/icons/chevron-left.svg',
             width: 28,
-            color: CustomColor.textOnPrimary,
           ),
           onPressed: () => Navigator.pop(context),
         ),
@@ -53,15 +52,13 @@ class _AttendanceInputState extends State<AttendanceInput> {
           ),
         ),
       ),
-      // Tombol Simpan melayang di bawah (Floating Action Button atau BottomNavigationBar)
-      // Opsi lain: Taruh tombol di dalam scroll view paling bawah.
-      // Di sini aku taruh di dalam body biar ikut ke-scroll.
+      
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // --- BAGIAN HEADER KELAS ---
+            //header class
             Text(
               'Public Speaking',
               style: GoogleFonts.poppins(
@@ -172,7 +169,7 @@ class _AttendanceInputState extends State<AttendanceInput> {
                           shape: BoxShape.circle,
                           color: Colors.grey[100],
                         ),
-                        child: Icon(Icons.person, color: Colors.grey[400]),
+                        child: Icon(Icons.person, color: Colors.grey[400]), //blm ganti warna
                       ),
                       const SizedBox(width: 12),
 
@@ -201,7 +198,7 @@ class _AttendanceInputState extends State<AttendanceInput> {
                           decoration: BoxDecoration(
                             color: participants[index]['isPresent']
                                 ? CustomColor
-                                      .success // Ganti warna sesuka hati
+                                      .success 
                                 : CustomColor.textOnPrimary,
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
