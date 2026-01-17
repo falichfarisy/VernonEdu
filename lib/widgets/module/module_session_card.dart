@@ -19,7 +19,8 @@ class ModuleSessionCard extends StatefulWidget {
   State<ModuleSessionCard> createState() => _ModuleSessionCardState();
 }
 
-class _ModuleSessionCardState extends State<ModuleSessionCard> {
+class _ModuleSessionCardState extends State<ModuleSessionCard>
+    with TickerProviderStateMixin {
   bool isExpanded = false;
 
   @override
@@ -36,58 +37,66 @@ class _ModuleSessionCardState extends State<ModuleSessionCard> {
           ),
         ],
       ),
-      child: Theme(
-        data: Theme.of(
-          context,
-        ).copyWith(dividerColor: CustomColor.textHint.withOpacity(0.6)),
-        child: Column(
-          children: [
-            ExpansionTile(
-              showTrailingIcon: false,
-              tilePadding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-              childrenPadding: const EdgeInsets.all(16),
-              onExpansionChanged: (value) {
-                setState(() => isExpanded = value);
-              },
-
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        widget.title,
-                        style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        widget.uploaded ? 'Sudah diunggah' : 'Belum diunggah',
-                        style: GoogleFonts.poppins(fontSize: 12),
-                      ),
-                    ],
-                  ),
-
-                  CircleAvatar(
-                    radius: 16,
-                    backgroundColor: widget.uploaded
-                        ? CustomColor.success
-                        : CustomColor.warning,
-                    child: SvgPicture.asset(
-                      widget.uploaded
-                          ? 'assets/icons/check.svg'
-                          : 'assets/icons/clock.svg',
-                      color: CustomColor.textOnPrimary,
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 12),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      widget.title,
+                      style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
                     ),
+                    const SizedBox(height: 4),
+                    Text(
+                      widget.uploaded ? 'Sudah diunggah' : 'Belum diunggah',
+                      style: GoogleFonts.poppins(fontSize: 12),
+                    ),
+                  ],
+                ),
+                CircleAvatar(
+                  radius: 16,
+                  backgroundColor: widget.uploaded
+                      ? CustomColor.success
+                      : CustomColor.warning,
+                  child: SvgPicture.asset(
+                    widget.uploaded
+                        ? 'assets/icons/check.svg'
+                        : 'assets/icons/clock.svg',
+                    color: Colors.white,
                   ),
-                ],
-              ),
-
-              children: widget.child != null ? [widget.child!] : [],
+                ),
+              ],
             ),
+          ),
 
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12),
+          if (isExpanded)
+            Divider(height: 1, color: CustomColor.textHint.withOpacity(0.6)),
+
+          AnimatedSize(
+            duration: const Duration(milliseconds: 250),
+            curve: Curves.easeInOut,
+            child: isExpanded && widget.child != null
+                ? Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: widget.child,
+                  )
+                : const SizedBox(),
+          ),
+
+          InkWell(
+            borderRadius: const BorderRadius.vertical(
+              bottom: Radius.circular(16),
+            ),
+            onTap: () {
+              setState(() => isExpanded = !isExpanded);
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 12),
               child: AnimatedRotation(
                 turns: isExpanded ? 0.5 : 0,
                 duration: const Duration(milliseconds: 200),
@@ -97,8 +106,8 @@ class _ModuleSessionCardState extends State<ModuleSessionCard> {
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

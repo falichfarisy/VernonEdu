@@ -37,7 +37,7 @@ Widget InfoBox(String value, String label) {
         Text(
           label,
           style: GoogleFonts.poppins(
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: FontWeight.w400,
             color: CustomColor.textOnPrimary,
           ),
