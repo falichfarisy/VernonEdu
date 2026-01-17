@@ -44,7 +44,7 @@ Widget ClassCard(String title, String subtitle) {
             Text(
               subtitle,
               style: GoogleFonts.poppins(
-                fontSize: 13,
+                fontSize: 14,
                 color: CustomColor.textSecondary,
               ),
             ),
