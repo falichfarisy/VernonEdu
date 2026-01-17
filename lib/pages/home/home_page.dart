@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:vernon_edu/pages/home/beranda_page.dart';
 import 'package:vernon_edu/pages/notification/notification_page.dart';
+import 'package:vernon_edu/pages/schedule/schedule_page.dart';
+import 'package:vernon_edu/constants/colors.dart';
 import 'package:vernon_edu/widgets/navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,40 +15,44 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int currentPageIndex = 0;
+  int pageIndex = 0;
+
+  final List<Widget> pages = [
+    const BerandaPage(),
+    const SchedulePage(),
+    const NotificationPage(),
+  ];
+
+  void onNavItemTapped(int index) {
+    setState(() {
+      pageIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildBody(),
+      body: pages[pageIndex],
       bottomNavigationBar: NavigationBarWidget(
-        currentPageIndex: currentPageIndex,
-        onDestinationSelected: (int index) {
-          setState(() {
-            currentPageIndex = index;
-          });
-        },
+        currentIndex: pageIndex,
+        onTap: onNavItemTapped,
       ),
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {
-        
-      }, 
-      backgroundColor: Colors.green,
-      label: Text('Chat Admin'),
-      icon: Icon(Icons.chat),),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        backgroundColor: const Color(0xFF8FBE55),
+        label: Text(
+          'Chat Admin',
+          style: GoogleFonts.poppins(
+            color: CustomColor.textOnPrimary,
+            fontWeight: FontWeight.w600
+            ),
+        ),
+        icon: SvgPicture.asset(
+          'assets/icons/whatsapp-logo.svg',
+          height: 30,
+        ),
+      ),
     );
-  }
-
-  Widget _buildBody() {
-    switch (currentPageIndex) {
-      case 0:
-        return BerandaPage();
-      case 1:
-        // return BerandaPage();
-      case 2:
-        return NotificationPage();
-      default:
-        return BerandaPage();
-    }
   }
 }

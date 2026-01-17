@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vernon_edu/models/information_class_model.dart';
 import 'package:vernon_edu/pages/home/active_class.dart';
+import 'package:vernon_edu/pages/home/facilitator/facilitator_page.dart';
 import 'package:vernon_edu/widgets/home/class_information_card.dart';
 import 'package:vernon_edu/widgets/home/menu_class_card.dart';
 import 'package:vernon_edu/widgets/home/profile_card.dart';
@@ -37,11 +38,16 @@ class BerandaPage extends StatelessWidget {
               right: 20,
               child: MenuClassCard(
                 items: [
-                  MenuItemData(icon: 'assets/icons/folder.svg', label: 'Kelas', page: ActiveClassPage()),
-                  // MenuItemData(
-                  //   icon: 'assets/icons/education.svg',
-                  //   label: 'Fasilitator',
-                  // ),
+                  MenuItemData(
+                    icon: 'assets/icons/folder.svg',
+                    label: 'Kelas',
+                    page: ActiveClassPage(),
+                  ),
+                  MenuItemData(
+                    icon: 'assets/icons/education.svg',
+                    label: 'Fasilitator',
+                    page: FacilitatorPage(),
+                  ),
                 ],
               ),
             ),
