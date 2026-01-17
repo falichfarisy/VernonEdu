@@ -233,10 +233,8 @@ class SessionCard extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: isDisabled ? Colors.grey[300] : color,
-                // Biar jadi kotak rounded (atau ganti circle)
                 borderRadius: BorderRadius.circular(12),
               ),
-
 
               child: Icon(leftIcon, color: Colors.white, size: 24),
             ),
