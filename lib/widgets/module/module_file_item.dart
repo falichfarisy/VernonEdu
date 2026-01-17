@@ -27,8 +27,7 @@ class ModuleFileItem extends StatelessWidget {
           backgroundColor: CustomColor.warning,
           child: SvgPicture.asset(
             'assets/icons/pencil.svg',
-            width: 10,
-            height: 10,
+            width: 16,
             color: CustomColor.textOnPrimary,
           ),
         ),
@@ -39,8 +38,7 @@ class ModuleFileItem extends StatelessWidget {
           backgroundColor: CustomColor.warning,
           child: SvgPicture.asset(
             'assets/icons/download.svg',
-            width: 10,
-            height: 10,
+            width: 16,
             color: CustomColor.textOnPrimary,
           ),
         ),
