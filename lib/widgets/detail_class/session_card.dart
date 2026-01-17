@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:vernon_edu/constants/colors.dart';
 import 'package:vernon_edu/pages/detail_class/attendance_input.dart';
@@ -234,12 +232,9 @@ class SessionCard extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: isDisabled ? Colors.grey[300] : color,
-                // Biar jadi kotak rounded (atau ganti circle)
                 borderRadius: BorderRadius.circular(12),
               ),
 
-              // Kalau mau bentuk kotak rounded seperti di gambar:
-              // shape: BoxShape.rectangle, borderRadius: BorderRadius.circular(10),
               child: Icon(leftIcon, color: Colors.white, size: 24),
             ),
             const SizedBox(width: 16),

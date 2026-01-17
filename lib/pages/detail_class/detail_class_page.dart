@@ -6,7 +6,7 @@ import 'package:vernon_edu/widgets/detail_class/session_card.dart';
 import 'package:vernon_edu/widgets/facilitator/facilitator_card.dart';
 import 'package:vernon_edu/widgets/home/menu_class_card.dart';
 
-// 2. Data Dummy Pengajar Tambahan
+// Data Dummy Pengajar Tambahan
 final List<Map<String, String>> facilitators = [
   {'name': 'Nama Fasilitator 1', 'role': 'Sesi 1'},
   {'name': 'Nama Fasilitator 2', 'role': 'Sesi 6'},
