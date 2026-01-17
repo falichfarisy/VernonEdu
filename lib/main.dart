@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vernon_edu/pages/detail_class/detail_class_page.dart';
 import 'package:vernon_edu/pages/splash/splash_screen_page.dart';
+import 'package:vernon_edu/pages/detail_class/attendance_input.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreenPage(),
+      home: DetailClassPage(username: 'Tanti Nur Dwiyanti', role: 'Mentor-Communication',),
     );
   }
 }
