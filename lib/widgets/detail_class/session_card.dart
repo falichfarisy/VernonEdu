@@ -1,9 +1,4 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-<<<<<<<<< Temporary merge branch 1
-=========
-import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vernon_edu/constants/colors.dart';
@@ -80,17 +75,17 @@ class SessionCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // Header
-                    const Text(
+                    Text(
                       "Sesi 8",
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     const SizedBox(height: 8),
-                    const Text(
+                    Text(
                       "Nama Materi",
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
@@ -110,7 +105,7 @@ class SessionCard extends StatelessWidget {
                     ),
 
                     const SizedBox(height: 20),
-                    const Divider(color: CustomColor.warning), // Garis Kuning
+                    const Divider(color: CustomColor.warning), 
                     const SizedBox(height: 20),
 
                     // List Item (Menu Bawah)
@@ -189,7 +184,7 @@ class SessionCard extends StatelessWidget {
           ),
           child: Text(
             text,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: textColor,
               fontWeight: FontWeight.bold,
               fontSize: 18,
@@ -206,13 +201,12 @@ class SessionCard extends StatelessWidget {
     );
   }
 
-  //helper untuk info baris (waltu.lokasi)
   Widget _infoRow(IconData icon, String text) {
     return Row(
       children: [
         Icon(icon, color: CustomColor.warning, size: 20),
         const SizedBox(width: 8),
-        Expanded(child: Text(text, style: const TextStyle(fontSize: 14))),
+        Expanded(child: Text(text, style: GoogleFonts.poppins(fontSize: 14))),
       ],
     );
   }
@@ -243,8 +237,7 @@ class SessionCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
 
-              // Kalau mau bentuk kotak rounded seperti di gambar:
-              // shape: BoxShape.rectangle, borderRadius: BorderRadius.circular(10),
+
               child: Icon(leftIcon, color: Colors.white, size: 24),
             ),
             const SizedBox(width: 16),
@@ -253,7 +246,7 @@ class SessionCard extends StatelessWidget {
             Expanded(
               child: Text(
                 title,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                   color: isDisabled ? Colors.grey : Colors.black,

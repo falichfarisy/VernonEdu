@@ -32,9 +32,10 @@ class MendatangFragment extends StatelessWidget {
               (cls) => ClassCard(
                 title: cls.title,
                 level: cls.level,
+                username: 'Tanti Nur Dwiyanti',
                 progress: 0,
                 showPercent: false,
-                startDate: cls.startDate, // ← tambahkan ini ke ClassCard
+                startDate: cls.startDate, 
               ),
             )
             .toList(),

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/pages/detail_class/assesment/assesment_page.dart';
+import 'package:vernon_edu/pages/detail_class/attendance/attendance_page.dart';
+import 'package:vernon_edu/pages/detail_class/module/module_page.dart';
+import 'package:vernon_edu/widgets/appbar_custom.dart';
 import 'package:vernon_edu/widgets/detail_class/session_card.dart';
 import 'package:vernon_edu/widgets/home/menu_class_card.dart';
 
@@ -17,20 +20,9 @@ class DetailClassPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: CustomColor.primary,
-        titleSpacing: 0,
-        leading: IconButton(
-          icon: SvgPicture.asset('assets/icons/arrow-left.svg', width: 10),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: Text(
-          'Detail Kelas',
-          style: GoogleFonts.poppins(
-            fontSize: 22,
-            color: CustomColor.textOnPrimary,
-          ),
-        ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: AppbarCustom(title: 'Detail Kelas'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -126,17 +118,17 @@ class DetailClassPage extends StatelessWidget {
                       MenuItemData(
                         label: "Presensi",
                         icon: "assets/icons/attendance.svg",
-                        page: Container(),
+                        page: AttendancePage(),
                       ),
                       MenuItemData(
                         label: "Modul",
                         icon: "assets/icons/book.svg",
-                        page: Container(),
+                        page: ModulePage(),
                       ),
                       MenuItemData(
                         label: "Assessment",
                         icon: "assets/icons/star.svg",
-                        page: Container(),
+                        page: AssesmentPage(),
                       ),
                       MenuItemData(
                         label: "RAB",

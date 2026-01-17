@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/appbar_custom.dart';
 import 'package:vernon_edu/widgets/module/info_box.dart';
 import 'package:vernon_edu/widgets/module/module_file_item.dart';
 import 'package:vernon_edu/widgets/module/module_session_card.dart';
@@ -12,24 +13,9 @@ class ModulePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: CustomColor.primary,
-        titleSpacing: 0,
-        leading: IconButton(
-          icon: SvgPicture.asset(
-            'assets/icons/chevron-left.svg',
-            width: 28,
-            color: CustomColor.textOnPrimary,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: Text(
-          'Modul',
-          style: GoogleFonts.poppins(
-            fontSize: 22,
-            color: CustomColor.textOnPrimary,
-          ),
-        ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: AppbarCustom(title: 'Kelas'),
       ),
 
       body: SingleChildScrollView(
@@ -68,7 +54,7 @@ class ModulePage extends StatelessWidget {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [InfoBox('10', 'Modul Telah Diunggah')],
+                children: [Expanded(child: InfoBox('10', 'Modul Telah Diunggah'))],
               ),
             ),
 

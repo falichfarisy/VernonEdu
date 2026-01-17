@@ -5,7 +5,7 @@ import 'package:vernon_edu/constants/colors.dart';
 
 Widget InfoBox(String value, String label) {
   return Container(
-    width: 360,
+    width: double.infinity,
     height: 140,
     padding: const EdgeInsets.all(16),
     decoration: BoxDecoration(

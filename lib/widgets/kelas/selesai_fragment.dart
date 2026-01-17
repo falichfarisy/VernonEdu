@@ -17,7 +17,8 @@ class SelesaiFragment extends StatelessWidget {
           title: 'Public Speaking',
           level: 'Regular A',
           progress: 1.0, 
-          color: CustomColor.success, 
+          color: CustomColor.success,
+          username: 'Tanti Dwi ',
         ),
       ],
     );
