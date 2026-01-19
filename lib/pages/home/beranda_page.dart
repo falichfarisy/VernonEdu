@@ -5,14 +5,15 @@ import 'package:vernon_edu/pages/home/facilitator/facilitator_page.dart';
 import 'package:vernon_edu/widgets/home/class_information_card.dart';
 import 'package:vernon_edu/widgets/home/menu_class_card.dart';
 import 'package:vernon_edu/widgets/home/profile_card.dart';
-import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
 
 class BerandaPage extends StatelessWidget {
   const BerandaPage({super.key});
 
+  static final classes = InformationClassModel.getAllInformationClass();
+
   @override
   Widget build(BuildContext context) {
-    final classes = InformationClassModel.getAllInformationClass();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -31,7 +32,7 @@ class BerandaPage extends StatelessWidget {
               ),
               child: ProfileCard(),
             ),
-
+  
             Positioned(
               bottom: -80,
               left: 20,

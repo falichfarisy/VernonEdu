@@ -26,6 +26,9 @@ dependencies:
   flutter_svg: ^2.2.3
   intl: ^0.18.1
   percent_indicator: ^4.2.2
+  get: ^4.7.3
+  shared_preferences: ^2.5.4
+  flutter_easyloading: ^3.0.5
 
 dev_dependencies:
   flutter_test:
@@ -50,15 +53,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/icons/chevron-left.svg
-    - assets/icons/chevron-down.svg
-    - assets/icons/check.svg
-    - assets/icons/clock.svg
-    - assets/icons/download.svg
-    - assets/icons/folder.svg
-    - assets/icons/info.svg
-    - assets/icons/pencil.svg
-    - assets/icons/user.svg
+    - assets/icons/
+    - assets/images/
     #- assets/img/logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

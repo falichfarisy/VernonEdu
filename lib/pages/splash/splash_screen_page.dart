@@ -1,30 +1,29 @@
-// import 'dart:async';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
 import 'package:vernon_edu/pages/login/login_page.dart';
 
-class SplashScreenPage extends StatefulWidget {
+class SplashScreenPage extends StatelessWidget {
   const SplashScreenPage({super.key});
 
   @override
-  State<SplashScreenPage> createState() => _SplashScreenState();
-}
+//   State<SplashScreenPage> createState() => _SplashScreenState();
+// }
 
-class _SplashScreenState extends State<SplashScreenPage> {
-  @override
-  void initState() {
-    super.initState();
+// class _SplashScreenState extends State<SplashScreenPage> {
+//   @override
+//   void initState() {
+//     super.initState();
 
-    Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const LoginPage()),
-      );
-    });
-  }
+//     Timer(const Duration(seconds: 3), () {
+//       Navigator.pushReplacement(
+//         context,
+//         MaterialPageRoute(builder: (context) => const LoginPage()),
+//       );
+//     });
+//   }
 
   @override
   Widget build(BuildContext context) {

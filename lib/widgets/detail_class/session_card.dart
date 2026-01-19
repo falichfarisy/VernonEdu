@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
 import 'package:vernon_edu/pages/detail_class/attendance_input.dart';
 import 'package:vernon_edu/widgets/facilitator/facilitator_card.dart';
 
@@ -18,7 +18,7 @@ class SessionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         color: CustomColor.textOnPrimary,
         borderRadius: BorderRadius.circular(20),

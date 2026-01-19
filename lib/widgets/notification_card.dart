@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
 
 class NotificationCard extends StatelessWidget {
   final String title;

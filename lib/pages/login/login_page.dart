@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vernon_edu/pages/home/home_page.dart';
-import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {

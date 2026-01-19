@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
 import 'package:vernon_edu/models/information_class_model.dart';
 import 'package:vernon_edu/pages/detail_class/detail_class_page.dart';
 

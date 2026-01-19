@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vernon_edu/constants/colors.dart';
-import 'package:vernon_edu/pages/detail_class/assesment/assesment_page.dart';
-import 'package:vernon_edu/pages/detail_class/attendance/attendance_page.dart';
-import 'package:vernon_edu/pages/detail_class/module/module_page.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
+import 'package:vernon_edu/pages/detail_class/assesment_page.dart';
+import 'package:vernon_edu/pages/detail_class/attendance_page.dart';
+import 'package:vernon_edu/pages/detail_class/module_page.dart';
 import 'package:vernon_edu/widgets/appbar_custom.dart';
 import 'package:vernon_edu/widgets/detail_class/session_card.dart';
 import 'package:vernon_edu/widgets/facilitator/facilitator_card.dart';
@@ -135,15 +135,13 @@ class _DetailClassPageState extends State<DetailClassPage> {
                           ),
                         ),
                       ],
-
-                      
                       
                     ],
                   ),
                   const SizedBox(height: 10),
                   const Divider(),
                   const SizedBox(height: 10),
-                  //memanggil menu_class_card
+
                   MenuClassCard(
                     items: [
                       MenuItemData(
@@ -167,8 +165,6 @@ class _DetailClassPageState extends State<DetailClassPage> {
                         page: Container(),
                       ),
                     ],
-
-                    spacing: 30,
                   ),
 
                   const SessionCard(),

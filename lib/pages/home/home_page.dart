@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vernon_edu/pages/home/beranda_page.dart';
 import 'package:vernon_edu/pages/notification/notification_page.dart';
 import 'package:vernon_edu/pages/schedule/schedule_page.dart';
-import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
 import 'package:vernon_edu/widgets/navigation_bar.dart';
 
 class HomePage extends StatefulWidget {

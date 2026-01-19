@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
 import 'package:vernon_edu/widgets/appbar_custom.dart';
 import 'package:vernon_edu/widgets/kelas/aktif_fragment.dart';
 import 'package:vernon_edu/widgets/kelas/mendatang_fragment.dart';

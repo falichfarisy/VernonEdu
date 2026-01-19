@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:vernon_edu/constants/colors.dart';
+import 'package:vernon_edu/widgets/shared/constants/colors.dart';
 
 class MenuClassCard extends StatelessWidget {
   final List<MenuItemData> items;
@@ -9,24 +9,20 @@ class MenuClassCard extends StatelessWidget {
   const MenuClassCard({
     super.key,
     required this.items,
-    this.spacing = 20, // spacing between items
+    this.spacing = 20, 
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity, // full width
-      margin: const EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 12,
-      ), // spacing outside
+      width: double.infinity,
       padding: const EdgeInsets.symmetric(
         vertical: 16,
         horizontal: 16,
-      ), // padding inside
+      ), 
       decoration: BoxDecoration(
         color: Colors.white, // white background
-        borderRadius: BorderRadius.circular(20), // rounded corners
+        borderRadius: BorderRadius.circular(20), 
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.15),

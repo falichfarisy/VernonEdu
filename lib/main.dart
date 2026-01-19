@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:vernon_edu/pages/detail_class/detail_class_page.dart';
-import 'package:vernon_edu/pages/splash/splash_screen_page.dart';
-import 'package:vernon_edu/pages/detail_class/attendance_input.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:vernon_edu/routes/app_pages.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final prefs = await SharedPreferences.getInstance();
+  Get.put<SharedPreferences>(prefs);
+  runApp(const Main());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Main extends StatelessWidget {
+  const Main({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DetailClassPage(username: 'Tanti Nur Dwiyanti', role: 'Mentor-Communication',),
+      getPages: AppPages.routes,
+      builder: EasyLoading.init(),
+      initialRoute: Routes.splash,
+      
     );
   }
 }
